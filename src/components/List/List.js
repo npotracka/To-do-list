@@ -2,6 +2,7 @@ import styles from './List.module.scss';
 import Column from '../Column/Column';
 
 const List = () => {
+  
     return (
       <div>
         <header className={styles.header}>
@@ -9,25 +10,9 @@ const List = () => {
         </header>
         <p className={styles.description}>Interesting things I want to check out</p>
         <section className={styles.columns}>
-          <Column>
-          <article>
-            <span className="fa fa-book" />
-            <h2>Books</h2>
-          </article>
-          </Column>
-          <Column>
-          <article>
-            <span className="fa fa-film" />
-            <h2>Movies</h2>
-          </article>
-          </Column>
-          <Column>
-          <article>
-            <span className="fa fa-gamepad" />
-            <h2>Games</h2>
-          </article>
-          </Column>
-          
+          <Column key="1" title="Books" icon="book" />
+          <Column key="2" title="Movies" icon="film" />
+          <Column key="3" title="Games" icon="gamepad" />
         </section>
       </div>
     );
