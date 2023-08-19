@@ -1,8 +1,9 @@
 import styles from './Column.module.scss'
 
-const Column = props => {
+const Column = (props) => {
     return (
-        <article className={styles.column}>
+        <article className={styles.column}>{props.children}
+            <span className={styles.icon + ' fa fa-' + props.icon} />
             <h2 className={styles.title}>{props.title}</h2>
         </article>
     );
