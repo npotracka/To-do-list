@@ -1,9 +1,30 @@
 import styles from './Favorite.module.scss';
+import Card from '../Card/Card';
+import { useSelector } from 'react-redux';
+import { getFavoriteCard } from '../../redux/store';
+import PageTitle from './../PageTitle/PageTitle';
 
 const Favorite = () => {
+  const cards = useSelector(getFavoriteCard);
+  if (!cards.length)
+    return (
+      <div className={styles.no_favorite_cards}>
+        You don't have favorite cards
+      </div>
+    );
   return (
-    <div className={styles.hero}>
-      <h1 className={styles.title}>Favorite</h1>
+    <div className={styles.favorite}>
+      <PageTitle>Favorite</PageTitle>
+      <ul className={styles.cards}>
+        {cards.map((card) => (
+          <Card
+            key={card.id}
+            title={card.title}
+            isFavorite={card.isFavorite}
+            id={card.id}
+          />
+        ))}
+      </ul>
     </div>
   );
 };

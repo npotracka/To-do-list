@@ -11,7 +11,7 @@ const CardForm = (props) => {
   
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(addCard({ title, columnId: props.columnId, isFavourite: props.isFavourite }));
+    dispatch(addCard({ title, columnId: props.columnId, isFavorite: props.isFavorite }));
     setTitle('');
   };
 
