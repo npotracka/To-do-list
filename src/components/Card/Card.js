@@ -13,7 +13,7 @@ const Card = ({ title, id }) => {
   
   const clickHandler = () => {
     setIsFavorite(!isFavorite);
-    dispatch(toggleCardFavorite(id, isFavorite));
+    dispatch(toggleCardFavorite(id));
   };
   return (
     <li className={styles.card}>
