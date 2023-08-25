@@ -1,6 +1,5 @@
 import initialState from './initialState';
 import { createStore, combineReducers } from 'redux';
-import subreducers from './listsRedux';
 import { listsReducer } from './listsReducer';
 import { columnsReducer } from './columnsReducer';
 import { cardsReducer } from './cardsReducer';

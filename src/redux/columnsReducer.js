@@ -4,10 +4,6 @@ import shortid from 'shortid';
 export const getAllColumns = (state) => state.columns;
 export const getColumnsByList = ({ columns }, listId) => columns.filter(column => column.listId === listId);
 
-// actions
-const createActionName = (actionName) => `app/lists/${actionName}`;
-const ADD_COLUMN = createActionName('ADD_COLUMN');
-
 // action creators
 export const addColumn = payload => ({ type: 'ADD_COLUMN', payload });
 
